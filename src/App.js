@@ -4,6 +4,8 @@ import axios from 'axios';
 import Recipe from './components/Recipe';
 import Search from './components/Search';
 
+import './style/master.css';
+
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState('chicken');
@@ -16,6 +18,8 @@ const App = () => {
 
   useEffect(() => {
     getRecipeData();
+
+    // eslint-disable-next-line
   }, [query]);
 
   const getRecipeData = async () => {
@@ -27,7 +31,7 @@ const App = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError("Sorry! Recipes limit is reached. You can search 4 recipes in 1 minute");
+      setError("Sorry! Recipes limit is reached. You can search 4 recipes in a minute");
     }
   };
 
@@ -41,6 +45,11 @@ const App = () => {
       setQuery(search);
       setSearch('');
     }
+  };
+
+  const deleteSearchValue = event => {
+    event.preventDefault();
+    setSearch('');
   };
 
   let recipesData = (
@@ -66,12 +75,13 @@ const App = () => {
   }
 
   return (
-    <main>
+    <main className="app">
       <div>
         <Search
           onChangeHandler={updateSearch}
           onSubmitHandler={getSearch}
           value={search}
+          deleteSearchValue={deleteSearchValue}
         />
       </div>
       <section>

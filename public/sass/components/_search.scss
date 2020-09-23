@@ -1,0 +1,50 @@
+.search {
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 2rem;
+    
+    @include flex;
+    
+    &__form {
+        width: 50%;
+        height: 5rem;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+
+        @include flex;
+    }
+
+    &__button {
+        width: 10%;
+        height: 100%;
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0 .5rem;
+
+        @include borderNone;
+    }
+
+    &__icon {
+        color: #767676;
+        font-size: 2rem;
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        padding: 0 1rem;
+        color: #111;
+        font-family: inherit;
+        letter-spacing: 1px;
+        font-size: 1.6rem;
+        
+        @include borderNone;
+
+        &::placeholder {
+            color: #767676;
+        }
+    }
+}

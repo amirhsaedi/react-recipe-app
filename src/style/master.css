@@ -45,3 +45,53 @@ body {
 
 .u-center-text {
   text-align: center !important; }
+
+.recipe {
+  border: 1px solid #000; }
+
+.search {
+  width: 100%;
+  height: 10vh;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .search__form {
+    width: 50%;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .search__button {
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 .5rem;
+    border: none;
+    outline: none; }
+  .search__icon {
+    color: #767676;
+    font-size: 2rem; }
+  .search__input {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 0 1rem;
+    color: #111;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    border: none;
+    outline: none; }
+    .search__input::placeholder {
+      color: #767676; }
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); }
