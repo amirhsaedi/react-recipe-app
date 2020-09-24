@@ -1,0 +1,23 @@
+@keyframes spinner {
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes spinnerDot {
+    80%, 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes spinnerDotBefore {
+    50% {
+        transform: scale(0.4); 
+    } 
+  
+    100%, 
+    0% {
+        transform: scale(1.0); 
+    } 
+}

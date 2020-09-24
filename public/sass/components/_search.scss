@@ -8,11 +8,14 @@
     &__form {
         width: 50%;
         height: 5rem;
-        background-color: #fff;
         border-radius: 8px;
         overflow: hidden;
+        border: 2px solid #000;
 
         @include flex;
+        @include respond(phone) {
+            width: 90%;
+        }
     }
 
     &__button {

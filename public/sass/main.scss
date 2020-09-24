@@ -1,3 +1,4 @@
+@import "abstracts/animation";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
@@ -7,5 +8,6 @@
 
 @import "components/recipe";
 @import "components/search";
+@import "components/spinner";
 
 @import "pages/home";

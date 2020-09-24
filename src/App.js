@@ -3,12 +3,13 @@ import axios from 'axios';
 
 import Recipe from './components/Recipe';
 import Search from './components/Search';
+import Spinner from './components/Spinner';
 
 import './style/master.css';
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
-  const [query, setQuery] = useState('chicken');
+  const [query, setQuery] = useState('hamburger');
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -31,7 +32,7 @@ const App = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError("Sorry! Recipes limit is reached. You can search 4 recipes in a minute");
+      setError("Sorry! Recipes limit is reached. You can search 4 recipes in a minute.");
     }
   };
 
@@ -67,24 +68,23 @@ const App = () => {
   );
 
   if (loading && !error) {
-    recipesData = <div>loading...</div>;
+    recipesData = <Spinner />;
   }
 
   if (error) {
-    recipesData = <div>{error}</div>;
+    recipesData = <div className="app__error">{error}</div>;
   }
 
   return (
     <main className="app">
-      <div>
-        <Search
-          onChangeHandler={updateSearch}
-          onSubmitHandler={getSearch}
-          value={search}
-          deleteSearchValue={deleteSearchValue}
-        />
-      </div>
-      <section>
+      <h1 className="app__title">Recipe application</h1>
+      <Search
+        onChangeHandler={updateSearch}
+        onSubmitHandler={getSearch}
+        value={search}
+        deleteSearchValue={deleteSearchValue}
+      />
+      <section className="app__recipe">
         {recipesData}
       </section>
     </main>

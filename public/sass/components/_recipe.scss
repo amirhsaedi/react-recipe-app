@@ -1,3 +1,50 @@
 .recipe {
-    border: 1px solid #000;
+    width: 50rem;
+    margin: 3rem 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 2px 5px 12px rgba(0,0,0,.2);
+
+    &__image {
+        width: 100%;
+        height: 25rem;
+        display: inline-block;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+
+    &__ingredient-box {
+        margin: 1rem 0;
+    }
+
+    &__ingredient-title {
+        padding: 0 1rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    &__ingredient-item {
+        font-size: 1.2rem;
+        padding: .5rem 1.5rem;
+        color: #353333;
+        margin: 0 .8rem;
+    }
+
+    &__ingredient-item:not(:last-child) {
+        border-bottom: .5px solid #767676;
+    }
+
+    &__calorie {
+        width: 100%;
+        text-align: right;
+        padding: 0 1.5rem;
+        font-size: 1.5rem;
+        color: red;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
 }
